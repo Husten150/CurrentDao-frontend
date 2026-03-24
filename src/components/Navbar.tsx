@@ -23,6 +23,9 @@ export function Navbar() {
             <a href="#trading" className="text-gray-600 hover:text-gray-900 transition-colors">
               Energy Trading
             </a>
+            <a href="#mobile-wallets" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Mobile Wallets
+            </a>
             <a href="#dao" className="text-gray-600 hover:text-gray-900 transition-colors">
               DAO Governance
             </a>
@@ -61,6 +64,9 @@ export function Navbar() {
             <div className="flex flex-col gap-4">
               <a href="#trading" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Energy Trading
+              </a>
+              <a href="#mobile-wallets" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Mobile Wallets
               </a>
               <a href="#dao" className="text-gray-600 hover:text-gray-900 transition-colors">
                 DAO Governance

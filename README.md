@@ -10,6 +10,10 @@ Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and the App Router.
 - Integration with backend APIs
 - Authentication and user management
 - Responsive design with Tailwind CSS
+- Mobile wallet integration with 12 supported wallet profiles
+- Mobile payment rails with optimized under-5-second settlement targets
+- Banking balance sync and cross-device wallet synchronization
+- Mobile wallet analytics and security posture visibility
 
 ## Getting Started
 
@@ -30,6 +34,13 @@ npm install
 
 ```bash
 npm run dev
+```
+
+### Quality Checks
+
+```bash
+npm run test -- --coverage
+npm run type-check
 ```
 
 ### Environment Variables
