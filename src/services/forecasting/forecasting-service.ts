@@ -1,7 +1,7 @@
-import { 
-  ForecastHorizon, 
-  ForecastData, 
-  DataPoint, 
+import {
+  ForecastHorizon,
+  ForecastData,
+  DataPoint,
   ConfidenceIntervalDataPoint,
   WeatherImpact,
   EconomicIndicator,
@@ -10,7 +10,7 @@ import {
   ScenarioResult
 } from '@/types/forecasting';
 
-// Helper to generate dates
+
 const generateDates = (count: number, horizon: ForecastHorizon): string[] => {
   const dates = [];
   const now = new Date();
@@ -82,21 +82,21 @@ export const getMarketForecasts = async (horizon: ForecastHorizon): Promise<Fore
   ];
 
   const ensembleModels: EnsembleModel[] = [
-    { 
-      name: 'Neural Network (LSTM)', 
-      weight: 0.4, 
+    {
+      name: 'Neural Network (LSTM)',
+      weight: 0.4,
       accuracy: 88,
       predictions: futureDates.map(timestamp => ({ timestamp, value: forecastValue + Math.random() * 4 - 2 }))
     },
-    { 
-      name: 'Random Forest', 
-      weight: 0.35, 
+    {
+      name: 'Random Forest',
+      weight: 0.35,
       accuracy: 84,
       predictions: futureDates.map(timestamp => ({ timestamp, value: forecastValue + Math.random() * 6 - 3 }))
     },
-    { 
-      name: 'ARIMA', 
-      weight: 0.25, 
+    {
+      name: 'ARIMA',
+      weight: 0.25,
       accuracy: 76,
       predictions: futureDates.map(timestamp => ({ timestamp, value: forecastValue + Math.random() * 8 - 4 }))
     }
@@ -122,10 +122,10 @@ export const runScenarioAnalysis = async (params: ScenarioParams, baseForecast: 
   let multiplier = 1;
   multiplier *= params.demandMultiplier;
   multiplier /= params.supplyMultiplier;
-  
+
   if (params.weatherSeverity === 'severe') multiplier *= 1.15;
   if (params.weatherSeverity === 'extreme') multiplier *= 1.35;
-  
+
   if (params.economicDownturn) multiplier *= 0.85; // Demand drops in downturn
 
   const scenarioForecast = baseForecast.map(dp => ({
@@ -135,7 +135,7 @@ export const runScenarioAnalysis = async (params: ScenarioParams, baseForecast: 
 
   const basePrice = baseForecast.length ? baseForecast[baseForecast.length - 1].value : 0;
   const newPrice = scenarioForecast.length ? scenarioForecast[scenarioForecast.length - 1].value : 0;
-  
+
   return {
     scenarioName: 'Custom Projection',
     baselineForecast: basePrice,
