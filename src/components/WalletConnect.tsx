@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Wallet, ConnectButton } from '@stellar/wallet-sdk'
+import { Wallet } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 export function WalletConnect() {
