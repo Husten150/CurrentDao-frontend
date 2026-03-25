@@ -36,6 +36,9 @@ export function Navbar() {
             <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition-colors">
               Portfolio
             </a>
+            <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Dynamic Pricing
+            </a>
             <a href="#docs" className="text-gray-600 hover:text-gray-900 transition-colors">
               Documentation
             </a>
@@ -81,6 +84,9 @@ export function Navbar() {
               </a>
               <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Portfolio
+              </a>
+              <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Dynamic Pricing
               </a>
               <a href="#docs" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Documentation
