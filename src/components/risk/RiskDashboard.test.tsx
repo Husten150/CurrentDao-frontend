@@ -135,7 +135,7 @@ jest.mock('@/components/risk/PortfolioAnalysis', () => ({
 }))
 
 jest.mock('@/components/risk/VaRCalculations', () => ({
-  VaRCalculations: () => <div>VaR Calculations Mock</div>,
+  VaRCalculations: () => 'VaR Calculations Mock',
 }))
 
 jest.mock('@/components/risk/RealTimeMonitoring', () => ({
