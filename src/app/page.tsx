@@ -15,7 +15,9 @@ import { EnergyTradingCard } from '@/components/EnergyTradingCard'
 import { DAOVotingCard } from '@/components/DAOVotingCard'
 import { StatsCard } from '@/components/StatsCard'
 import { WalletConnect } from '@/components/WalletConnect'
-import { MarketForecasting } from '@/components/forecasting/MarketForecasting'
+import { ServiceWorkerRegistration } from '@/offline/components/ServiceWorkerRegistration'
+import { OfflineIndicator } from '@/offline/components/OfflineIndicator'
+
 export default function HomePage() {
   const { data: stats } = useQuery({
     queryKey: ['stats'],
@@ -32,6 +34,8 @@ export default function HomePage() {
 
   return (
     <div className="space-y-8">
+      <ServiceWorkerRegistration />
+      <OfflineIndicator />
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
@@ -78,7 +82,7 @@ export default function HomePage() {
         />
         <StatsCard
           title="DAO Proposals"
-          value={stats?.totalProposals?.toString() || '0'}
+          value={stats?.totalProposals.toString() || '0'}
           icon={Shield}
           color="text-purple-600"
           bgColor="bg-purple-100"
