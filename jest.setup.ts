@@ -16,6 +16,12 @@ jest.mock('html2canvas', () =>
   )
 )
 
+// Mock TextEncoder for Stellar SDK
+global.TextEncoder = require('util').TextEncoder;
+
+// Mock TextDecoder for Stellar SDK
+global.TextDecoder = require('util').TextDecoder;
+
 // Mock localStorage
 const localStorageMock = (function () {
   let store: Record<string, string> = {}
