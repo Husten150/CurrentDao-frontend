@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.energy-card {
+  @apply bg-white rounded-lg shadow-lg p-6 border border-gray-200;
+}
+
+.metric-card {
+  @apply bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg p-4;
+}
+
+.recommendation-item {
+  @apply bg-blue-50 border-l-4 border-blue-400 p-4 mb-3 rounded;
+}
+
+.savings-item {
+  @apply bg-green-50 border-l-4 border-green-400 p-4 mb-3 rounded;
+}
+
+.alert-item {
+  @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-3 rounded;
+}
